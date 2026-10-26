@@ -1,0 +1,659 @@
+# Build a Premium Gifting Brand Website for "Thetidhkar"
+
+Act as a senior frontend developer, UI/UX designer, and creative director specializing in premium boutique brands.
+
+Build a complete, polished, production-quality FRONTEND website for my gifting business named **Thetidhkar** using React and Tailwind CSS.
+
+The website should feel like a premium, feminine, handcrafted gifting boutique: warm, elegant, soft, romantic, minimal, and emotionally appealing. Take strong visual inspiration from the product and brand reference images I have provided.
+
+Do NOT create a generic e-commerce template. The website should look like a carefully art-directed luxury gifting brand with a consistent visual identity, refined typography, beautiful photography, subtle animations, and excellent mobile responsiveness.
+
+## 1. TECH STACK AND PROJECT REQUIREMENTS
+
+- React with Vite.
+- Tailwind CSS for styling.
+- JavaScript and JSX.
+- lucide-react for elegant icons.
+- Framer Motion (motion package) for smooth animations.
+- React Router only if useful; a polished single-page website is preferred.
+- Use reusable React components and clean project architecture.
+- Frontend only. No backend, database, authentication, payment gateway, or server-side order management.
+- No fake checkout flow.
+- The website must run correctly inside Replit with a working development server.
+- Use functional components and React hooks.
+- Ensure every button, navigation link, product filter, and interaction works.
+- Use accessible semantic HTML and keyboard-friendly controls.
+- Avoid unnecessary dependencies.
+
+First inspect the existing Replit project and its installed packages. Preserve useful existing configuration and install only the dependencies required.
+
+## 2. BRAND IDENTITY
+
+Brand name: Thetidhkar
+
+Brand category:
+- Thoughtful gifts
+- Handmade flower candles
+- Decorative candles
+- Gift hampers and curated gift sets
+- Pearl hangers and clothing accessories
+- Special occasion gifting
+- Small handmade products and personalized gifts
+
+Brand personality:
+- Warm and welcoming
+- Thoughtful and heartfelt
+- Elegant but approachable
+- Feminine and romantic
+- Handmade, personal, and detail-oriented
+- Premium without looking excessively expensive or corporate
+
+Brand messaging:
+"Thoughtful Gifts • Little Joys • Big Feelings"
+
+Primary tagline:
+"Little Gifts. Lasting Feelings."
+
+Secondary tagline:
+"Small Flames, Big Happiness."
+
+Supporting copy:
+"Every gift tells a story. Discover thoughtfully curated little treasures, handmade candles, and beautiful details created to make ordinary moments feel special."
+
+Use the greeting "Assalamu Alaikum" tastefully in a small optional welcome detail or announcement bar, inspired by the supplied brand artwork. Keep the main shopping experience welcoming to everyone.
+
+## 3. COLOR PALETTE
+
+Build the entire website around the following colors, inspired by the reference images.
+
+- Warm ivory background: #FFF8EF
+- Cream: #F6EBDD
+- Blush pink: #F4D4D0
+- Soft rose: #D99598
+- Dusty rose: #B76E79
+- Deep burgundy: #642B32
+- Warm chocolate brown: #43291F
+- Champagne gold: #C6A36A
+- Muted sage green: #8B9676
+- White: #FFFFFF
+
+Usage:
+- Use warm ivory and cream as the main page backgrounds.
+- Use blush pink for soft decorative surfaces and selected cards.
+- Use deep burgundy or chocolate brown for headings and important text.
+- Use dusty rose for primary call-to-action buttons and small accents.
+- Use champagne gold for thin borders, dividers, icons, and elegant decorative details.
+- Use muted sage sparingly for natural accents.
+
+Avoid neon colors, harsh pure-black backgrounds, oversaturated gradients, and excessive gold effects.
+
+The overall visual atmosphere should resemble a warm, sunlit boutique photographed in natural afternoon light.
+
+## 4. TYPOGRAPHY AND VISUAL STYLE
+
+Use Google Fonts if available:
+- Cormorant Garamond or Playfair Display for elegant editorial headings.
+- DM Sans or Lato for body copy and interface elements.
+- A tasteful script font such as Allura or Great Vibes for small handwritten accents.
+
+Typography rules:
+- Large, sophisticated serif headlines.
+- Comfortable line heights and generous whitespace.
+- Body text should be readable on mobile.
+- Small uppercase labels with subtle letter spacing.
+- Script typography should be used sparingly, not for paragraphs.
+- Avoid excessive bold text.
+
+Visual references:
+- Luxury handmade candle product photography.
+- Cream linen, marble trays, soft floral arrangements, pearl accessories, satin ribbons, glass jars, and warm sunlight.
+- Editorial layouts with asymmetrical image compositions.
+- Fine borders, subtle shadows, organic curves, and rounded corners used with restraint.
+- Soft pink and cream product cards.
+- Minimal line icons and delicate heart motifs.
+
+The final result should look like a boutique brand built by a skilled designer.
+
+## 5. NAVBAR
+
+Create a beautiful, responsive navigation bar.
+
+Desktop layout:
+- Left: elegant Thetidhkar wordmark with a tiny heart or floral accent.
+- Center: Home, Shop, Our Story, Why Thetidhkar, Contact.
+- Right: Instagram icon and a prominent "Shop on Instagram" button.
+
+Navbar behavior:
+- Transparent or cream-colored over the top hero section.
+- Smooth transition to a slightly opaque ivory background when scrolling.
+- Subtle bottom border or gentle shadow when sticky.
+- Smooth scrolling to page sections.
+- Active navigation states.
+- Mobile hamburger menu with an elegant animated opening and closing transition.
+- Mobile menu must close after clicking a navigation link.
+- No horizontal overflow.
+
+Create the logo using typography and small CSS or Lucide decorative details if no actual logo file is available. Do not invent an elaborate logo image.
+
+## 6. ANNOUNCEMENT BAR
+
+Add a slim announcement bar above the navbar.
+
+Suggested text:
+"Made with love, wrapped with care ♡"
+
+Style:
+- Dusty rose or deep burgundy background.
+- Warm ivory text.
+- Small, elegant typography.
+- Keep it subtle and compact.
+
+Do not claim free shipping, discounts, delivery times, or promotional offers unless they are explicitly configured by the owner.
+
+## 7. HERO SECTION
+
+Create an exceptional first impression.
+
+Layout:
+- Large editorial hero with a two-column layout on desktop.
+- Left side: typography, brand introduction, tagline, CTA buttons.
+- Right side: beautiful, large product imagery featuring handmade rose candles, cream flower candles, ribbons, and gift packaging.
+- On mobile, stack the content naturally and make the product image prominent.
+
+Suggested content:
+
+Eyebrow:
+"THOUGHTFUL GIFTS · HANDCRAFTED WITH LOVE"
+
+Main heading:
+"Little Gifts.
+Big Feelings."
+
+Supporting paragraph:
+"Discover thoughtful little treasures, beautiful handmade candles, and special gifts made to turn everyday moments into memories."
+
+Primary CTA:
+"Explore Our Collection"
+
+Secondary CTA:
+"Shop on Instagram"
+
+Small supporting detail:
+"Handpicked details. Heartfelt gifting. Made to make someone smile."
+
+Design details:
+- Large serif typography.
+- One small script-style phrase such as "made with love".
+- Soft decorative floral elements.
+- Gentle background texture or subtle cream-to-blush color variation.
+- An elegant rounded image composition or editorial collage.
+- Tiny heart accents and champagne-colored divider lines.
+- An understated scroll indicator.
+
+Animations:
+- Headline fades and rises into view.
+- Paragraph and CTA buttons appear with a slight stagger.
+- Product imagery enters with a subtle fade and scale transition.
+- Use gentle floating motion for one small decorative element only.
+
+Avoid excessive parallax, flashing elements, or aggressive animations.
+
+## 8. TRUST AND BRAND HIGHLIGHTS SECTION
+
+Immediately below the hero, create a compact trust strip with four items.
+
+1. Thoughtfully Curated
+   "Little details that mean more."
+
+2. Handmade With Love
+   "Carefully crafted, beautifully finished."
+
+3. Beautifully Giftable
+   "Thoughtful touches for special moments."
+
+4. Made for Every Occasion
+   "Celebrate life's little joys."
+
+Use delicate line icons, thin champagne dividers, and a cream background.
+
+Important: Present these as brand values, not independently verified certifications or guarantees.
+
+On mobile, display a clean two-column grid or horizontally scrollable strip without clipping.
+
+## 9. FEATURED COLLECTION / SHOP SECTION
+
+Section heading:
+"Little Things, Lots of Love"
+
+Subtitle:
+"Find something thoughtful for someone special."
+
+Build a beautiful product gallery with reusable product cards.
+
+Use these initial categories:
+- Flower Candles
+- Rose Candles
+- Candle Collections
+- Pearl Hangers
+- Gift Sets & Hampers
+
+Use the actual uploaded reference images from the project assets. If they are not already in the project, place them into an appropriate public/assets directory and import or reference them correctly. Preserve their aspect ratios and do not stretch them.
+
+Product card requirements:
+- Large product image.
+- Product name.
+- Short, charming description.
+- Category label.
+- Optional price field that remains hidden when no real price is configured.
+- "View on Instagram" or "Enquire on Instagram" CTA.
+- Subtle image zoom on hover.
+- Delicate card border or soft shadow.
+- Consistent image proportions.
+- Responsive grid: four columns on wide desktop, three on medium screens, two on mobile where appropriate.
+
+Create interactive category filters:
+"All", "Candles", "Flower Candles", "Accessories", "Gift Sets".
+
+Filters must actually filter the product data. Use React state and a clear active state.
+
+Use these sample products as editable data:
+1. Handmade Pink Rose Candle
+   Category: Flower Candles
+   Description: A sculpted floral candle that makes a thoughtful little gift.
+
+2. Rose Heart Candle
+   Category: Candles
+   Description: A romantic candle for adding warmth to special moments.
+
+3. Rose Candle Trio
+   Category: Candle Collections
+   Description: A beautiful trio of rose-inspired candles in soft, timeless shades.
+
+4. Handmade Rose Candle Collection
+   Category: Flower Candles
+   Description: Delicate floral candles created to brighten a gift or a cozy corner.
+
+5. Flower Stick Candles
+   Category: Candles
+   Description: Elegant daisy-inspired candle sticks for charming celebrations.
+
+6. Pearl Bow Hangers
+   Category: Accessories
+   Description: Pearl-detailed hangers finished with soft blush satin bows.
+
+7. Thoughtful Gift Collection
+   Category: Gift Sets
+   Description: Beautiful little details thoughtfully arranged for gifting.
+
+These are display names and descriptions, not verified inventory. Make the product list easy to edit in a single products.js file. Do not imply every item is currently available.
+
+Add an elegant empty state for categories with no matching products.
+
+## 10. PRODUCT QUICK VIEW
+
+When a product image or "Quick View" control is clicked, open an accessible modal or drawer.
+
+Display:
+- Larger product image.
+- Product name.
+- Description.
+- Category.
+- Price only if configured.
+- "Ask About This Product" button linking to Instagram.
+
+Include:
+- Close button.
+- Escape key support.
+- Click-outside-to-close behavior.
+- Appropriate focus handling.
+- Mobile-friendly dimensions.
+
+Do not implement a cart or checkout.
+
+## 11. EDITORIAL BRAND STORY SECTION
+
+Section title:
+"A Little Story, Wrapped With Love"
+
+Supporting copy:
+"At Thetidhkar, we believe the smallest gestures can carry the biggest feelings. From delicate flower candles to thoughtfully chosen gifting details, every piece is selected or created to bring a little more beauty, warmth, and joy into someone's day."
+
+Add:
+- An editorial product or behind-the-scenes image.
+- A smaller decorative image beside it.
+- A handwritten accent: "It's the little things ♡".
+- A CTA: "Discover Our Collection".
+
+Use an asymmetrical two-column layout on desktop and a stacked layout on mobile.
+
+Do not fabricate a founder biography, business history, manufacturing process, or customer testimonials.
+
+## 12. OCCASIONS SECTION
+
+Heading:
+"Little Gifts for Every Kind of Moment"
+
+Create four elegant visual tiles:
+- Birthday Surprises
+- Just Because
+- Thank You Gifts
+- Special Celebrations
+
+Each tile should contain a relevant image, title, short emotional line, and a "Explore Gifts" action that scrolls to the collection or applies an appropriate category filter.
+
+Use image overlays very lightly, with readable typography.
+
+Avoid claiming wedding, corporate, or customization services unless configured by the owner.
+
+## 13. INSTAGRAM SECTION
+
+Instagram is the primary purchase channel. Make this section visually attractive and prominent.
+
+Heading:
+"A Little More Love on Instagram"
+
+Subtitle:
+"Discover our latest creations, thoughtful details, and gifting inspiration."
+
+Create a six-image editorial grid using available product images.
+
+Each image should link to the configured Instagram profile or the relevant product inquiry URL when available.
+
+On hover:
+- Slight image zoom.
+- A translucent warm overlay.
+- A small Instagram icon and "View on Instagram" label.
+
+Add a prominent CTA:
+"Follow Thetidhkar on Instagram"
+
+All Instagram URLs must be defined in one configuration file.
+
+Use this placeholder until I configure my actual handle:
+https://www.instagram.com/YOUR_INSTAGRAM_USERNAME/
+
+Also provide a configurable Instagram Direct Message URL:
+https://ig.me/m/YOUR_INSTAGRAM_USERNAME
+
+Centralize these values in src/config/site.js.
+
+Important:
+- Clearly mark the placeholder so it is easy to replace.
+- Do not invent a real Instagram username.
+- Do not claim an order has been placed.
+- Opening Instagram should be the only purchase/inquiry action.
+- Use target="_blank" with rel="noopener noreferrer" for external links.
+- Where possible, use a profile link when the exact product DM link is not available.
+
+## 14. WHY CHOOSE THETIDHKAR SECTION
+
+Heading:
+"Thoughtful in Every Little Detail"
+
+Create three or four elegant value cards:
+- Thoughtful Selection
+- Beautiful Presentation
+- Little Details, Big Feelings
+- Gifts Worth Remembering
+
+Each card should include a line icon, concise description, and a subtle hover transition.
+
+Use the cream, blush, and champagne palette.
+
+These cards should express the brand's philosophy rather than make unverified claims about materials, sustainability, shipping, or quality certifications.
+
+## 15. GIFTING CALLOUT SECTION
+
+Create a wide, beautiful callout banner with a warm blush background and a product photograph.
+
+Headline:
+"Someone Deserves a Little Something Special."
+
+Supporting text:
+"Find a thoughtful gift, then message us on Instagram to ask about the details."
+
+Primary CTA:
+"Enquire on Instagram"
+
+Secondary CTA:
+"Browse the Collection"
+
+Use a curved decorative shape, delicate heart illustration, or thin ornamental border. Keep it elegant.
+
+## 16. FAQ SECTION
+
+Create a compact accordion with smooth open/close transitions.
+
+Suggested questions:
+- How can I purchase a product?
+- How do I ask about product availability?
+- Can I see more product photos?
+- How can I enquire about gifting options?
+
+Suggested answers:
+"Message us on Instagram to enquire about a product and its availability."
+
+"Send us the product name or a screenshot through Instagram Direct Messages."
+
+"Visit our Instagram profile for additional photos and updates."
+
+"Message us on Instagram to discuss your requirements. Available options can be confirmed directly."
+
+Keep the FAQ data editable. Do not invent shipping policies, return policies, delivery estimates, payment options, or customization guarantees.
+
+## 17. FOOTER
+
+Build a premium footer with a warm burgundy or chocolate background.
+
+Include:
+- Thetidhkar wordmark.
+- Short brand tagline.
+- Quick links.
+- Shop categories.
+- Instagram profile link.
+- Instagram DM inquiry link.
+- Copyright year generated dynamically.
+- A small handwritten accent: "Made with love ♡".
+
+Include a clear note:
+"Purchases and product enquiries are handled through Instagram."
+
+Ensure sufficient contrast and comfortable spacing.
+
+## 18. ANIMATIONS AND MICROINTERACTIONS
+
+Use Framer Motion for tasteful animations.
+
+Required:
+- Smooth reveal-on-scroll for major sections.
+- Gentle stagger for product cards.
+- Soft hero entrance animation.
+- Image hover zoom.
+- Button hover and tap feedback.
+- Smooth mobile menu transition.
+- FAQ accordion animation.
+- Product modal entrance and exit.
+- Sticky navbar transition.
+- Subtle decorative floating elements.
+
+Animation guidelines:
+- Short durations, approximately 0.25–0.7 seconds for most interactions.
+- Soft easing curves.
+- Avoid excessive bouncing, dramatic rotation, or constant movement.
+- Use viewport-based triggers so offscreen sections animate as they appear.
+- Respect prefers-reduced-motion.
+- Avoid layout shifts and performance-heavy animation.
+- The site must remain usable when animation is disabled.
+
+## 19. RESPONSIVE DESIGN
+
+Test and refine the layout for:
+- Mobile: 320–430px.
+- Tablet: 768–1024px.
+- Desktop: 1280–1440px.
+- Large screens: 1600px and above.
+
+Requirements:
+- No horizontal scrolling.
+- No overlapping text.
+- Images must resize gracefully.
+- Touch-friendly controls.
+- Product cards must have consistent spacing.
+- The navigation menu must work on mobile.
+- Buttons must be large enough to tap comfortably.
+- Hero typography must scale using responsive sizing.
+- Keep important text readable over images.
+- Footer columns must stack cleanly.
+
+## 20. PERFORMANCE AND ACCESSIBILITY
+
+- Use optimized local images when possible.
+- Use lazy loading for below-the-fold images.
+- Use descriptive alt text.
+- Provide visible focus indicators.
+- Use proper heading hierarchy.
+- Use accessible button labels and modal semantics.
+- Maintain sufficient color contrast.
+- Add loading and image fallback states.
+- Avoid unnecessary re-renders.
+- Ensure all external links behave safely.
+- Respect reduced-motion preferences.
+- Avoid layout shifts while images load.
+
+## 21. SEO AND POLISH
+
+Add:
+- Page title: "Thetidhkar | Thoughtful Gifts & Handmade Candles"
+- Meta description describing the gifting brand.
+- Theme color matching the cream and blush palette.
+- Appropriate Open Graph metadata.
+- A favicon using a simple heart or floral motif if feasible.
+- A clean URL structure for any implemented sections or routes.
+- Consistent naming and polished copy.
+
+Do not add fake ratings, review counts, certifications, customer logos, sales numbers, testimonials, or scarcity indicators.
+
+## 22. COMPONENT ARCHITECTURE
+
+Use a clean component structure similar to:
+
+src/
+  components/
+    AnnouncementBar.jsx
+    Navbar.jsx
+    Hero.jsx
+    TrustStrip.jsx
+    ProductSection.jsx
+    ProductCard.jsx
+    ProductQuickView.jsx
+    BrandStory.jsx
+    OccasionsSection.jsx
+    InstagramSection.jsx
+    WhyChooseUs.jsx
+    GiftingCallout.jsx
+    FAQ.jsx
+    Footer.jsx
+    ScrollToTop.jsx
+  data/
+    products.js
+    faqs.js
+  config/
+    site.js
+  hooks/
+    useScrollReveal.js
+  App.jsx
+  main.jsx
+  index.css
+
+Adapt the structure if needed, but keep the code modular and understandable.
+
+The products data file should support optional image, category, description, price, availability label, and Instagram URL fields.
+
+The site configuration file should centralize:
+- Brand name.
+- Taglines.
+- Instagram profile URL.
+- Instagram DM URL.
+- Optional contact information.
+- Navigation links.
+
+Do not hardcode the Instagram username in multiple components.
+
+## 23. USE MY PROVIDED REFERENCE IMAGES
+
+I have supplied multiple reference images showing:
+- Thetidhkar brand identity and gift presentation.
+- Pearl hangers with blush bows.
+- Pink sculpted flower candles.
+- Rose candles in glass jars.
+- Handmade rose candle collections.
+- Rose ball and pillar candles.
+- Flower stick candles.
+
+Use the actual provided assets, not unrelated stock imagery, whenever the relevant product appears.
+
+If the images are available in the Replit project, identify and reuse them. If they are not, create a clear public/assets directory and tell me exactly which files I need to upload there.
+
+Create a central image mapping in the product data file so each product displays the correct image.
+
+The images should be treated as a coherent brand photography collection. Preserve their natural proportions, use object-fit: cover only when intentional cropping improves the composition, and use object-contain when the full product needs to remain visible.
+
+Do not recreate the supplied images using AI if the original assets are available.
+
+## 24. FINAL DESIGN QUALITY
+
+The website must have:
+- A premium hero.
+- Beautiful product cards.
+- Elegant typography.
+- Consistent color usage.
+- Thoughtful whitespace.
+- Real working filters.
+- A functional product quick-view modal.
+- A responsive navbar.
+- Smooth scrolling.
+- Instagram purchase links.
+- Animated section reveals.
+- A polished footer.
+- Complete mobile responsiveness.
+
+Avoid:
+- Generic SaaS layouts.
+- Excessive rounded cards.
+- Glassmorphism everywhere.
+- Excessive gradients.
+- Huge amounts of empty space without purpose.
+- Too many floating hearts.
+- Emoji replacing professional icons.
+- Fake e-commerce functionality.
+- Placeholder lorem ipsum.
+- Broken image paths.
+- Buttons that do nothing.
+- Overly dark styling that hides the products.
+
+## 25. EXECUTION INSTRUCTIONS
+
+Do not just explain how to build the site. Actually implement the website in the Replit workspace.
+
+Work in this order:
+1. Inspect the existing project and available image assets.
+2. Set up React, Vite, Tailwind CSS, and dependencies if required.
+3. Build the complete responsive layout and component system.
+4. Integrate the real product images.
+5. Implement product filtering and the quick-view modal.
+6. Wire all Instagram links through the configuration file.
+7. Add animations, accessibility, and responsive refinements.
+8. Start the development server.
+9. Fix all build errors, runtime errors, missing imports, broken image paths, and console warnings that can reasonably be addressed.
+10. Preview the website and verify its major sections and interactions.
+
+Do not stop after creating the hero section. Complete the entire website.
+
+At the end, tell me:
+- What you implemented.
+- Which files contain the product data and Instagram configuration.
+- Exactly where I should replace the placeholder Instagram username.
+- Whether all supplied images were successfully integrated.
+- Whether the development server runs successfully.
+
+Final objective: create a visually stunning, warm, premium, emotionally engaging gifting boutique website for **Thetidhkar** that encourages visitors to explore the collection and purchase by contacting the business through Instagram.

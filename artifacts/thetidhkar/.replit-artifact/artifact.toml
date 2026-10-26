@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Thetidhkar"
+description = "A warm, editorial storefront for Thetidhkar's handmade flower candles, thoughtful gifts, and pearl accessories, with product enquiries handled through Instagram."
+version = "1.0.0"
+id = "artifacts/thetidhkar"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 21171
+
+[services.development]
+run = "pnpm --filter @workspace/thetidhkar run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/thetidhkar", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/thetidhkar/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "21171"
+BASE_PATH = "/"

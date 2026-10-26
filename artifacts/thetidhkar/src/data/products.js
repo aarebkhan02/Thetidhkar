@@ -1,0 +1,12 @@
+// Optional per-product fields: image, category, description, price, availabilityLabel, instagramUrl.
+const asset = (name) => `/assets/${name}`;
+export const products = [
+  { id:'pink-rose', name:'Handmade Pink Rose Candle', category:'Flower Candles', filter:'Flower Candles', description:'A sculpted floral candle that makes a thoughtful little gift.', image:asset('Handmade_Pink_Rose_Candle_1793018947515.webp'), alt:'Sculpted pink rose candle on a cream linen surface' },
+  { id:'rose-heart', name:'Rose Heart Candle', category:'Candles', filter:'Candles', description:'A romantic candle for adding warmth to special moments.', image:asset('Romantic_Rose_Candle_Trio_1793018947515.webp'), alt:'Rose-shaped candles arranged in clear glass vessels' },
+  { id:'rose-trio', name:'Rose Candle Trio', category:'Candle Collections', filter:'Candles', description:'A beautiful trio of rose-inspired candles in soft, timeless shades.', image:asset('Romantic_Rose_Candle_Trio_1793018947515.webp'), alt:'Three rose-inspired candles in glass jars' },
+  { id:'rose-collection', name:'Handmade Rose Candle Collection', category:'Flower Candles', filter:'Flower Candles', description:'Delicate floral candles created to brighten a gift or a cozy corner.', image:asset('Handmade_Rose_Candle_Collection_1793018947516.webp'), alt:'Pink and ivory rose candles displayed on a serving tray' },
+  { id:'flower-sticks', name:'Flower Stick Candles', category:'Candles', filter:'Candles', description:'Daisy-inspired candle sticks for charming celebrations.', image:asset('Elegant_Flower_Stick_Candle_Infographic_1793018947518.webp'), alt:'Flower stick candles and supplied product artwork; view image for full details', contain:true },
+  { id:'pearl-hangers', name:'Pearl Bow Hangers', category:'Accessories', filter:'Accessories', description:'Pearl-detailed hangers finished with soft blush satin bows.', image:asset('Blush_Boutique_Dreams_with_Pearl_Hangers_1793018947514.webp'), alt:'Pearl hangers with blush satin bows and floral garments' },
+  { id:'gift-collection', name:'Thoughtful Gift Collection', category:'Gift Sets', filter:'Gift Sets', description:'Beautiful little details thoughtfully arranged for gifting.', image:asset('WhatsApp_Image_2026-10-26_at_5.27.40_PM_(1)_1793018956205.webp'), alt:'Gift box with four decorative candle forms nestled in pink paper' },
+];
+export const filters = ['All', 'Candles', 'Flower Candles', 'Accessories', 'Gift Sets'];
