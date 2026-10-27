@@ -11,6 +11,7 @@ import {
   Navbar,
   Hero,
   TrustStrip,
+  ProductMarquee,
   ProductSection,
   ProductQuickView,
   BrandStory,
@@ -36,6 +37,7 @@ function Home() {
       <main>
         <Hero />
         <TrustStrip />
+        <ProductMarquee onOpen={setQuickView} />
         <ProductSection
           selectedFilter={filter}
           setSelectedFilter={setFilter}

@@ -16,6 +16,7 @@ import {
 import { site } from '../config/site';
 import { faqs } from '../data/faqs';
 import { filters, products } from '../data/products';
+import Marquee from 'react-fast-marquee';
 
 const ease = [0.22, 1, 0.36, 1];
 const reveal = {
@@ -365,6 +366,59 @@ export function TrustStrip() {
   );
 }
 
+export function ProductMarquee({ onOpen }) {
+  return (
+    <section className="product-marquee-section" aria-label="Featured Product Marquee">
+      <div className="marquee-header">
+        <div className="eyebrow">
+          <Sparkles size={13} />
+          <span>Curated Little Treasures</span>
+        </div>
+        <h3>Handmade With Love & Thoughtful Touches</h3>
+      </div>
+
+      <div className="marquee-container" data-testid="product-marquee">
+        <Marquee
+          speed={100}
+          play={true}
+          gradient={false}
+          pauseOnHover={false}
+          autoFill={true}
+        >
+          {products.map((product) => (
+            <button
+              key={product.id}
+              className="marquee-card"
+              type="button"
+              onClick={() => onOpen?.(product)}
+              aria-label={`Quick view: ${product.name}`}
+              data-testid={`marquee-item-${product.id}`}
+            >
+              <div className="marquee-img-wrap">
+                <img
+                  src={product.image}
+                  alt={product.alt || product.name}
+                  loading="lazy"
+                />
+                <span className="marquee-badge">{product.category}</span>
+                <span className="marquee-quick-hint">Quick View</span>
+              </div>
+              {/* <div className="marquee-body">
+                <h4 className="marquee-title">{product.name}</h4>
+                <div className="marquee-meta">
+                  <span className="marquee-action">
+                    Enquire <ArrowRight size={11} />
+                  </span>
+                </div>
+              </div> */}
+            </button>
+          ))}
+        </Marquee>
+      </div>
+    </section>
+  );
+}
+
 export function ProductSection({
   onOpen,
   selectedFilter,
@@ -451,13 +505,27 @@ export function ProductSection({
                 {product.availabilityLabel}
               </p>
             )}
-            <LinkOut
-              className="product-ask"
-              href={product.instagramUrl || site.instagramProfile}
-              testId={`link-enquire-${product.id}`}
-            >
-              Enquire on Instagram <ArrowRight size={13} />
-            </LinkOut>
+            <div className="product-card-actions">
+              {product.meeshoUrl && (
+                <a
+                  className="button-meesho"
+                  href={product.meeshoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid={`button-meesho-${product.id}`}
+                  aria-label={`Shop ${product.name} on Meesho`}
+                >
+                  Shop on Meesho <ArrowRight size={13} />
+                </a>
+              )}
+              <LinkOut
+                className="product-ask"
+                href={product.instagramUrl || site.instagramProfile}
+                testId={`link-enquire-${product.id}`}
+              >
+                Enquire on Instagram <ArrowRight size={13} />
+              </LinkOut>
+            </div>
           </motion.article>
         ))}
       </motion.div>
@@ -558,14 +626,28 @@ export function ProductQuickView({ product, onClose }) {
                 {product.availabilityLabel}
               </p>
             )}
-            <p>Ask us on Instagram for current details and availability.</p>
-            <LinkOut
-              className="button-primary"
-              href={product.instagramUrl || site.instagramProfile}
-              testId={`button-ask-${product.id}`}
-            >
-              Ask About This Product <ArrowRight size={15} />
-            </LinkOut>
+            <p>Ask us on Instagram for current details and availability, or shop directly on Meesho.</p>
+            <div className="modal-cta-group">
+              {product.meeshoUrl && (
+                <a
+                  className="button-primary button-meesho-cta"
+                  href={product.meeshoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-testid={`modal-button-meesho-${product.id}`}
+                  aria-label={`Shop ${product.name} on Meesho`}
+                >
+                  Shop on Meesho <ArrowRight size={15} />
+                </a>
+              )}
+              <LinkOut
+                className="button-outline button-ask-cta"
+                href={product.instagramUrl || site.instagramProfile}
+                testId={`button-ask-${product.id}`}
+              >
+                Ask About This Product <ArrowRight size={15} />
+              </LinkOut>
+            </div>
           </div>
         </motion.div>
       </motion.div>
@@ -681,28 +763,31 @@ export function OccasionsSection({ onFilter }) {
 const instagramImages = [
   {
     src: '/assets/Handmade_Pink_Rose_Candle_1793018947515.webp',
-    alt: 'Pink sculpted flower candle',
+    alt: 'Handmade sculpted pink rose candle',
   },
   {
     src: '/assets/Romantic_Rose_Candle_Trio_1793018947515.webp',
-    alt: 'Glass rose candle trio',
+    alt: 'Romantic rose candle trio in glass vessels',
   },
   {
     src: '/assets/Handmade_Rose_Candle_Collection_1793018947516.webp',
-    alt: 'Collection of blush and ivory rose candles',
+    alt: 'Collection of blush and ivory rose candles on tray',
   },
   {
-    src: '/assets/Handcrafted_Rose_Candle_Collection_1793018947517.webp',
-    alt: 'Rose ball and pillar candle collection',
+    src: '/assets/WhatsApp_Image_2026-10-26_at_5.27.40_PM_(1)_1793018956205.webp',
+    alt: 'Curated candle gift box with decorative sweet designs',
   },
   {
     src: '/assets/Blush_Boutique_Dreams_with_Pearl_Hangers_1793018947514.webp',
-    alt: 'Pearl hangers with blush bows',
+    alt: 'Pearl hangers finished with blush satin ribbon bows',
   },
+  
   {
-    src: '/assets/Elegant_Flower_Stick_Candle_Infographic_1793018947518.webp',
-    alt: 'Flower stick candle product artwork',
-  },
+    
+      src:
+        '/assets/WhatsApp_Image_2026-10-26_at_5.27.40_PM_(2)_1793018956204.webp',
+        alt: 'Diwali Celebration'
+    },
 ];
 
 export function InstagramSection() {
@@ -955,7 +1040,7 @@ export function Footer({ onFilter }) {
         </div>
       </div>
       <div className="footer-bottom">
-        <span>© {year} Thetidhkar. All little joys reserved.</span>
+        <span></span>
         <span className="footer-hand">Made with love ♡</span>
       </div>
     </footer>
