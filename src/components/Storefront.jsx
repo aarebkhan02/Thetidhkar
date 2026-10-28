@@ -4,12 +4,14 @@ import {
   ArrowDown,
   ArrowRight,
   ArrowUp,
+  Eye,
   Flower2,
   Gift,
   Heart,
   Instagram,
   Menu,
   Plus,
+  ShoppingBag,
   Sparkles,
   X,
 } from 'lucide-react';
@@ -475,56 +477,74 @@ export function ProductSection({
             transition={{ duration: 0.35, delay: index * 0.035, ease }}
             data-testid={`card-product-${product.id}`}
           >
-            <button
-              className="product-image"
-              type="button"
-              onClick={() => onOpen(product)}
-              aria-label={`Quick view: ${product.name}`}
-              data-testid={`button-quick-view-${product.id}`}
-            >
-              <ProductVisual
-                className="product-visual"
-                src={product.image}
-                alt={product.alt}
-                contain={product.contain}
-              />
-              <span className="quick-view-chip">Quick view</span>
-            </button>
-            {product.category && (
-              <div className="product-category">{product.category}</div>
-            )}
-            <h3 className="product-title">{product.name}</h3>
-            {product.description && (
-              <p className="product-description">{product.description}</p>
-            )}
-            {product.price != null && (
-              <p className="product-price">{product.price}</p>
-            )}
-            {product.availabilityLabel && (
-              <p className="product-availability">
-                {product.availabilityLabel}
-              </p>
-            )}
-            <div className="product-card-actions">
-              {product.meeshoUrl && (
-                <a
-                  className="button-meesho"
-                  href={product.meeshoUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  data-testid={`button-meesho-${product.id}`}
-                  aria-label={`Shop ${product.name} on Meesho`}
-                >
-                  Shop on Meesho <ArrowRight size={13} />
-                </a>
-              )}
-              <LinkOut
-                className="product-ask"
-                href={product.instagramUrl || site.instagramProfile}
-                testId={`link-enquire-${product.id}`}
+            <div className="product-media-wrap">
+              <button
+                className="product-image"
+                type="button"
+                onClick={() => onOpen(product)}
+                aria-label={`Quick view: ${product.name}`}
+                data-testid={`button-quick-view-${product.id}`}
               >
-                Enquire on Instagram <ArrowRight size={13} />
-              </LinkOut>
+                <ProductVisual
+                  className="product-visual"
+                  src={product.image}
+                  alt={product.alt}
+                  contain={product.contain}
+                />
+                <div className="product-quick-view-overlay">
+                  <span className="quick-view-chip">
+                    <Eye size={13} /> Quick View
+                  </span>
+                </div>
+              </button>
+              {product.category && (
+                <span className="product-category-badge">{product.category}</span>
+              )}
+              <span className="product-handcrafted-badge" title="Artisanal & Handcrafted">
+                <Sparkles size={11} /> Handcrafted
+              </span>
+            </div>
+
+            <div className="product-card-body">
+              <h3 className="product-title" title={product.name}>
+                {product.name}
+              </h3>
+              {product.description && (
+                <p className="product-description">{product.description}</p>
+              )}
+              {product.price != null && (
+                <p className="product-price">{product.price}</p>
+              )}
+              {product.availabilityLabel && (
+                <p className="product-availability">
+                  {product.availabilityLabel}
+                </p>
+              )}
+              <div className="product-card-actions">
+                {product.meeshoUrl && (
+                  <a
+                    className="button-meesho"
+                    href={product.meeshoUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-testid={`button-meesho-${product.id}`}
+                    aria-label={`Shop ${product.name} on Meesho`}
+                  >
+                    <ShoppingBag size={14} />
+                    <span>Shop on Meesho</span>
+                    <ArrowRight size={13} className="action-arrow" />
+                  </a>
+                )}
+                <LinkOut
+                  className="button-instagram product-ask"
+                  href={product.instagramUrl || site.instagramProfile}
+                  testId={`link-enquire-${product.id}`}
+                  label={`Enquire about ${product.name} on Instagram`}
+                >
+                  <Instagram size={14} />
+                  <span>Enquire on Instagram</span>
+                </LinkOut>
+              </div>
             </div>
           </motion.article>
         ))}
