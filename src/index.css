@@ -622,5 +622,265 @@ html { scroll-behavior:smooth; scroll-padding-top:100px; } body { background:var
   }
 }
 
+/* ==========================================================================
+   HERO RESPONSIVENESS FOR PHONE SCREENS
+   ========================================================================== */
+@media (max-width: 760px) {
+  .hero {
+    padding: 38px 20px 42px !important;
+    background: #e8d5be !important;
+    min-height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    overflow: hidden;
+  }
+
+  .hero-content-wrap {
+    order: 1 !important;
+    position: relative !important;
+    z-index: 3 !important;
+    width: 100% !important;
+  }
+
+  .hero-copy {
+    max-width: 100% !important;
+  }
+
+  .hero .eyebrow {
+    font-size: 0.66rem !important;
+    letter-spacing: 0.16em !important;
+    margin-bottom: 10px !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.35rem, 9.5vw, 3.4rem) !important;
+    line-height: 0.95 !important;
+    letter-spacing: -0.03em !important;
+    margin: 12px 0 16px !important;
+  }
+
+  .hero h1 span {
+    display: block;
+    white-space: nowrap;
+  }
+
+  .hero p {
+    font-size: 0.88rem !important;
+    line-height: 1.65 !important;
+    margin-bottom: 22px !important;
+    max-width: 100% !important;
+    color: #695246 !important;
+  }
+
+  .hero-actions {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: 100% !important;
+    margin-top: 22px !important;
+  }
+
+  .hero-actions .button-primary,
+  .hero-actions .button-outline {
+    width: 100% !important;
+    min-height: 48px !important;
+    padding: 0 20px !important;
+    font-size: 0.76rem !important;
+    justify-content: center !important;
+    border-radius: 8px !important;
+    text-align: center !important;
+  }
+
+  .hero-note {
+    margin-top: 18px !important;
+    font-size: 0.68rem !important;
+    line-height: 1.5 !important;
+    gap: 10px !important;
+  }
+
+  .hero-note:before {
+    width: 22px !important;
+    flex-shrink: 0 !important;
+  }
+
+  .hero-art-backdrop {
+    order: 2 !important;
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: clamp(230px, 58vw, 320px) !important;
+    margin-top: 26px !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    box-shadow: 0 10px 28px rgba(67, 41, 31, 0.12) !important;
+    border: 1px solid rgba(198, 163, 106, 0.35) !important;
+  }
+
+  .hero-art-parallax,
+  .hero-art-floating {
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+    top: 0 !important;
+    bottom: 0 !important;
+  }
+
+  .hero-art-image {
+    object-position: center center !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  /* Keep essential zero-gravity floating particles within mobile view */
+  .pearl-4,
+  .pearl-5,
+  .pearl-6,
+  .petal-3 {
+    display: none !important;
+  }
+
+  .pearl-1 { width: 14px !important; height: 14px !important; top: 12% !important; right: 20% !important; }
+  .pearl-2 { width: 11px !important; height: 11px !important; top: 40% !important; right: 12% !important; }
+  .pearl-3 { width: 13px !important; height: 13px !important; bottom: 20% !important; right: 16% !important; }
+  .petal-1 { width: 16px !important; height: 20px !important; top: 18% !important; right: 22% !important; }
+  .petal-2 { width: 13px !important; height: 17px !important; top: 50% !important; right: 10% !important; }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 30px 16px 34px !important;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.1rem, 9.2vw, 2.7rem) !important;
+    margin: 10px 0 14px !important;
+  }
+
+  .hero p {
+    font-size: 0.82rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 18px !important;
+  }
+
+  .hero-art-backdrop {
+    height: clamp(200px, 54vw, 250px) !important;
+    margin-top: 20px !important;
+  }
+}
+
+/* ==========================================================================
+   MOBILE INTERACTIVE DELIGHTS (Wishlist Hearts & Surprise Picker)
+   ========================================================================== */
+/* Interactive Wishlist Heart Button */
+.product-wishlist-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(198, 163, 106, 0.4);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  z-index: 3;
+  color: var(--burgundy);
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 2px 8px rgba(67, 41, 31, 0.08);
+}
+
+.product-wishlist-btn:hover,
+.product-wishlist-btn:focus-visible {
+  background: #ffffff;
+  border-color: var(--dusty-rose);
+  transform: scale(1.1);
+}
+
+.product-wishlist-btn.is-active {
+  background: #fff0f2;
+  border-color: #d99598;
+  color: #b76e79;
+}
+
+/* Filter Row: Wishlist & Surprise Buttons */
+.filter-chip-wishlist {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  border-color: #d99598 !important;
+  color: #924550 !important;
+}
+
+.filter-chip-wishlist[aria-pressed=true] {
+  background: #924550 !important;
+  color: #ffffff !important;
+  border-color: #924550 !important;
+}
+
+.filter-chip-surprise {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, rgba(255, 248, 239, 0.95), rgba(244, 212, 208, 0.9)) !important;
+  border: 1px solid rgba(183, 110, 121, 0.55) !important;
+  color: var(--burgundy) !important;
+  font-weight: 600 !important;
+  transition: all 0.25s ease;
+}
+
+.filter-chip-surprise:hover,
+.filter-chip-surprise:active {
+  background: var(--burgundy) !important;
+  color: #ffffff !important;
+  border-color: var(--burgundy) !important;
+  transform: translateY(-2px);
+}
+
+/* Phone Screen Touch Interactions */
+@media (max-width: 760px) {
+  /* Smooth swipeable horizontal filter carousel on phone */
+  .filter-row {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    padding: 4px 2px 10px;
+    margin-bottom: 22px;
+    gap: 8px !important;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .filter-row::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-chip {
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    white-space: nowrap;
+    padding: 8px 14px !important;
+    font-size: 0.68rem !important;
+  }
+
+  .product-wishlist-btn {
+    top: 8px;
+    right: 8px;
+    width: 28px;
+    height: 28px;
+  }
+
+  .product-wishlist-btn svg {
+    width: 13px;
+    height: 13px;
+  }
+}
+
+
 
 

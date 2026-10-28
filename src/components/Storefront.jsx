@@ -12,6 +12,7 @@ import {
   Menu,
   Plus,
   ShoppingBag,
+  Shuffle,
   Sparkles,
   X,
 } from 'lucide-react';
@@ -185,6 +186,19 @@ export function Hero() {
     setOffset({ x: 0, y: 0 });
   };
 
+  const handleTouchMove = (e) => {
+    if (!e.touches?.[0]) return;
+    const touch = e.touches[0];
+    const { width, height, left, top } = e.currentTarget.getBoundingClientRect();
+    const x = (touch.clientX - left) / width - 0.5;
+    const y = (touch.clientY - top) / height - 0.5;
+    setOffset({ x: x * 32, y: y * 32 });
+  };
+
+  const handleTouchEnd = () => {
+    setOffset({ x: 0, y: 0 });
+  };
+
   return (
     <section
       className="hero hero-antigravity"
@@ -193,7 +207,13 @@ export function Hero() {
       onMouseLeave={handleMouseLeave}
     >
       {/* Seamless Anti-Gravity Floating Artwork Background Layer */}
-      <div className="hero-art-backdrop" aria-hidden="true">
+      <div
+        className="hero-art-backdrop"
+        onTouchStart={handleTouchMove}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+        aria-hidden="true"
+      >
         {/* Parallax layer reacting to mouse movements */}
         <motion.div
           className="hero-art-parallax"
@@ -426,8 +446,35 @@ export function ProductSection({
   selectedFilter,
   setSelectedFilter,
 }) {
+  const [favorites, setFavorites] = useState(() => {
+    try {
+      const saved = localStorage.getItem('thetidhkar_wishlist');
+      return saved ? JSON.parse(saved) : [];
+    } catch {
+      return [];
+    }
+  });
+
+  const toggleFavorite = (productId) => {
+    setFavorites((prev) => {
+      const isFav = prev.includes(productId);
+      const next = isFav ? prev.filter((id) => id !== productId) : [...prev, productId];
+      try {
+        localStorage.setItem('thetidhkar_wishlist', JSON.stringify(next));
+      } catch {}
+      return next;
+    });
+  };
+
+  const handleSurpriseMe = () => {
+    const randomProduct = products[Math.floor(Math.random() * products.length)];
+    onOpen(randomProduct);
+  };
+
   const visible =
-    selectedFilter === 'All'
+    selectedFilter === 'Saved'
+      ? products.filter((p) => favorites.includes(p.id))
+      : selectedFilter === 'All'
       ? products
       : products.filter((product) =>
           selectedFilter === 'Candles'
@@ -465,6 +512,26 @@ export function ProductSection({
             {filter}
           </button>
         ))}
+        {favorites.length > 0 && (
+          <button
+            type="button"
+            className="filter-chip filter-chip-wishlist"
+            aria-pressed={selectedFilter === 'Saved'}
+            onClick={() => setSelectedFilter('Saved')}
+            data-testid="filter-saved"
+          >
+            <Heart size={12} fill="currentColor" /> Saved ({favorites.length})
+          </button>
+        )}
+        <button
+          type="button"
+          className="filter-chip filter-chip-surprise"
+          onClick={handleSurpriseMe}
+          data-testid="button-surprise-me"
+          aria-label="Pick a random gift for me"
+        >
+          <Shuffle size={12} /> Surprise Me 🎁
+        </button>
       </div>
       <motion.div className="product-grid" layout data-testid="product-grid">
         {visible.map((product, index) => (
@@ -500,9 +567,24 @@ export function ProductSection({
               {product.category && (
                 <span className="product-category-badge">{product.category}</span>
               )}
-              <span className="product-handcrafted-badge" title="Artisanal & Handcrafted">
-                <Sparkles size={11} /> Handcrafted
-              </span>
+              <motion.button
+                type="button"
+                className={`product-wishlist-btn ${favorites.includes(product.id) ? 'is-active' : ''}`}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  toggleFavorite(product.id);
+                }}
+                whileTap={{ scale: 0.72 }}
+                aria-label={favorites.includes(product.id) ? 'Remove from wishlist' : 'Save to wishlist'}
+                data-testid={`button-wishlist-${product.id}`}
+              >
+                <Heart
+                  size={14}
+                  fill={favorites.includes(product.id) ? '#b76e79' : 'none'}
+                  stroke={favorites.includes(product.id) ? '#b76e79' : '#642b32'}
+                  strokeWidth={favorites.includes(product.id) ? 0 : 2}
+                />
+              </motion.button>
             </div>
 
             <div className="product-card-body">
