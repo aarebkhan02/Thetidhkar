@@ -20,7 +20,7 @@ export const products = [
     description: 'Pearl-detailed hangers finished with soft blush satin bows.',
     image: asset('Blush_Boutique_Dreams_with_Pearl_Hangers_1793018947514.webp'),
     alt: 'Pearl hangers with blush satin bows and floral garments',
-    meeshoUrl: 'https://www.meesho.com/s/p/i9kaj3?utm_source=share_67705b88a893b446f0b455435180a31668bd720461a6c5dd5c0e7c2a6f28f47b',
+    meeshoUrl: 'https://www.meesho.com/s/p/hx0lq1?utm_source=share_67705b88a893b446f0b455435180a31668bd720461a6c5dd5c0e7c2a6f28f47b',
     instagramUrl: 'https://www.instagram.com/thetidhkar/',
   },
   {
@@ -31,7 +31,7 @@ export const products = [
     description: 'Lustrous pearl-beaded hangers accented with delicate ivory satin ribbon bows.',
     image: asset('Ivory_Pearl_Bow_Hangers_Luxury_1793091885640.webp'),
     alt: 'Luxury pearl beaded hangers with ivory satin bows displayed on a brass garment rack',
-    meeshoUrl: 'https://www.meesho.com/s/p/i9kaj3?utm_source=share_67705b88a893b446f0b455435180a31668bd720461a6c5dd5c0e7c2a6f28f47b',
+    meeshoUrl: 'https://www.meesho.com/s/p/hx0lq1?utm_source=share_67705b88a893b446f0b455435180a31668bd720461a6c5dd5c0e7c2a6f28f47b',
     instagramUrl: 'https://www.instagram.com/thetidhkar/',
   },
   {
